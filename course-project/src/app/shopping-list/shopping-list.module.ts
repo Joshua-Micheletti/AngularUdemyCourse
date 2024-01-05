@@ -3,6 +3,8 @@ import { ShoppingListEditComponent } from "./shopping-edit/shopping-edit.compone
 import { ShoppingListComponent } from "./shopping-list.component";
 import { FormsModule } from "@angular/forms";
 import { ShoppingListRoutingModule } from "./shopping-list-routing.module";
+import { SharedModule } from "../shared/shared.module";
+import { LoggingService } from "../logging.service";
 
 @NgModule({
     declarations: [
@@ -10,8 +12,12 @@ import { ShoppingListRoutingModule } from "./shopping-list-routing.module";
         ShoppingListEditComponent
     ],
     imports: [
+        SharedModule,
         FormsModule,
         ShoppingListRoutingModule
-    ]
+    ],
+    // providers: [
+    //     LoggingService
+    // ]
 })
 export class ShoppingListModule {}
